@@ -3,11 +3,7 @@ version: '3'
 
 services:
   web:
-  #  build: .
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: shruti/hello-world:1
+    build: .
     command: python /code/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
